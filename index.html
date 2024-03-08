@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conte mais</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Nos conte mais sobre você</h1>
+        <p>O primeiro passo, é sabermos do que você precisa</p>
+      </header>
+      <form id="my-form">
+        <fieldset>
+          <legend>Informações da sua marca</legend>
+          <div class="input-wrapper">
+            <label for="name">Nome da marca</label>
+            <input required type="text" id="name" placeholder="Nome da marca" />
+          </div>
+          <div class="input-wrapper">
+            <label for="event-link"
+              >Rede social
+              <span>(Link de alguma rede social da sua marca)</span></label
+            >
+            <input
+              placeholder="https://www.instagram.com/seuperfil"
+              type="url"
+              id="event-link"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="wpp-number"
+              >Whatsapp para contato <span>(somente números)</span></label
+            >
+            <input
+            id="wpp-number"
+              type="tel"
+              pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+              placeholder="(DDD) 90000-0000"
+              class="form-control"
+              onkeypress="$(this).mask('(00) 00000-0000')"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="extra-info">Informações extras</label>
+            <textarea name="" id="extra-info" cols="30" rows="10"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label for="category">Categoria</label>
+            <select name="" id="category">
+              <option value="default">Selecione uma categoria</option>
+              <option value="cafeteria">Lanchonete</option>
+              <option value="wear">Moda</option>
+              <option value="digital-influencer">Digital Influencer</option>
+            </select>
+          </div>
+        </fieldset>
+
+        
+      </form>
+
+      <footer>
+        <input
+          class="submit-button"
+          type="submit"
+          form="my-form"
+          value="Enviar"
+        />
+      </footer>
+      <p class="footer-assign">Made with love by Ergon</p>
+    </div>
+  </body>
+</html>
