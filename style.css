@@ -23,6 +23,7 @@
   --bg-button: #04d361;
   --bg-button-hover: #07c55c;
   --bg-url: url(../assets/bgErgon.png);
+  --bg-mobile-url: url(../assets/bgMobile.png);
   font-size: 62.5%;
 }
 body {
@@ -231,23 +232,34 @@ input:invalid {
 @media (max-width: 700px) {
   body {
     padding: 0 5%;
+    height: 100svh;
   }
-  form{
+  .page {
+    height: 100svh;
+  }
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-
 @media (max-width: 300px) {
   body {
     padding: 0;
+    height: 100svh;
   }
-  header{
+  .page {
+    width: 300px;
+    height: 100svh;
+  }
+  header {
     padding: 0 2.4rem;
   }
   header p {
     font-size: 1.2rem;
   }
-  
+  body::after {
+    width: 300px;
+    background: var(--bg-mobile-url) center;
+  }
 }
