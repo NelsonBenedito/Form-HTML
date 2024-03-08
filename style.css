@@ -238,3 +238,16 @@ input:invalid {
     align-items: center;
   }
 }
+
+@media (max-width: 300px) {
+  body {
+    padding: 0;
+  }
+  header{
+    padding: 0 2.4rem;
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+  
+}
